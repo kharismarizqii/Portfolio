@@ -1,0 +1,42 @@
+body {
+    background-color: #312B4F;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar {
+    background-color: #312B4F;
+
+}
+
+
+.navbar-brand {
+    font-weight: 500;
+}
+
+.navbar-nav {
+    font-weight: 300;
+}
+
+.nav-item {
+    margin-right: 45px;
+}
+
+.tron {
+    background-color: #312B4F;
+    height: 768px;
+}
+
+.nama {
+    font-weight: 700;
+    color: white;
+}
+
+.nama span {
+    color: #E30845;
+}
+
+.identitas .job h5 {
+    font-weight: 200;
+    color: white;
+    opacity: 0.4;
+}
