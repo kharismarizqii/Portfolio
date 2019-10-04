@@ -8,6 +8,9 @@ body {
 
 }
 
+.vertical {
+    margin-top: 50%;
+}
 
 .navbar-brand {
     font-weight: 500;
@@ -39,4 +42,37 @@ body {
     font-weight: 200;
     color: white;
     opacity: 0.4;
+}
+
+.about {
+    height: 768px;
+    background-color: #312B4F;
+}
+
+
+.about .kotak {
+    width: 240px;
+    height: 340px;
+    background-color: #E30845;
+}
+
+.about h3 {
+    color: white;
+    font-weight: 700;
+}
+
+.aboutkanan h4 {
+    font-weight: 300;
+    color: white;
+    opacity: 0.4;
+}
+
+@media only screen and (max-width: 600px) {
+    .about {
+        height: 400px;
+    }
+
+    .aboutkiri {
+        height: 10px;
+    }
 }
