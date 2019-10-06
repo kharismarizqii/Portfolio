@@ -1,6 +1,14 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #312B4F;
     font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
 }
 
 .navbar {
@@ -61,10 +69,80 @@ body {
     font-weight: 700;
 }
 
+.aboutkanan .pilihan {
+    display: inline-block;
+}
+
 .aboutkanan h4 {
     font-weight: 300;
     color: white;
     opacity: 0.4;
+}
+
+.aboutkanan h4:hover {
+    cursor: pointer;
+    text-shadow: 0 0 8px #E30845;
+}
+
+ul.pilihan li a {
+    text-decoration: none !important;
+
+}
+
+ul.pilihan {
+    text-decoration: none;
+}
+
+/* overlay */
+.navbar {
+    z-index: 600;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 999;
+
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+
+.overlay:target {
+    padding: 100px;
+    display: block;
+    transition: 0.6s;
+    width: auto;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .8);
+}
+
+.overlay:target img {
+    box-shadow: 0 0 20px #E30845;
+    border-radius: 8px;
+    animation: zoomDanFade 0.6s;
+}
+
+.overlay a {
+    margin: 10px;
+    color: white;
+    cursor: pointer;
+    text-shadow: 0 0 8px #E30845;
+
+}
+
+.overlay a:hover {}
+
+.overlay:target h5 {
+    color: white;
+    margin-top: 50px;
+    text-shadow: 0 0 20px #E30845;
 }
 
 @media only screen and (max-width: 600px) {
@@ -74,5 +152,19 @@ body {
 
     .aboutkiri {
         height: 10px;
+    }
+}
+
+/* animasi */
+
+@keyframes zoomDanFade {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
     }
 }
