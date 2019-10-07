@@ -182,6 +182,11 @@ ul.pilihan {
     height: 768px;
 }
 
+footer {
+    background-color: rgb(29, 25, 49);
+    height: 80px;
+}
+
 @media only screen and (max-width: 600px) {
     .about {
         height: 400px;
