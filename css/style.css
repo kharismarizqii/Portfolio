@@ -5,6 +5,7 @@ html {
 body {
     background-color: #312B4F;
     font-family: 'Montserrat', sans-serif;
+    color: white;
 }
 
 a {
@@ -58,7 +59,7 @@ a {
 }
 
 
-.about .kotak {
+.kotak {
     width: 240px;
     height: 340px;
     background-color: #E30845;
@@ -92,6 +93,7 @@ ul.pilihan li a {
 ul.pilihan {
     text-decoration: none;
 }
+
 
 /* overlay */
 .navbar {
@@ -145,6 +147,41 @@ ul.pilihan {
     text-shadow: 0 0 20px #E30845;
 }
 
+.foto {
+    height: 120px;
+    width: 120px;
+
+    left: 0;
+
+}
+
+.foto img {
+    padding: 10px;
+}
+
+
+.java {
+    position: relative;
+}
+
+
+.progress {
+    width: 200px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20%;
+    background-color: rgb(95, 95, 95);
+}
+
+.progress-bar {
+    background-color: #E30845;
+}
+
+.skills {
+    height: 768px;
+}
+
 @media only screen and (max-width: 600px) {
     .about {
         height: 400px;
@@ -154,6 +191,7 @@ ul.pilihan {
         height: 10px;
     }
 }
+
 
 /* animasi */
 
