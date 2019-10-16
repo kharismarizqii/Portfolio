@@ -1,19 +1,48 @@
+const btn = document.getElementById("b1");
+const namebtn = document.getElementById("b1").getAttribute("name");
+const namebtn2 = document.getElementById("b2").getAttribute("name");
+const btn2 = document.getElementById("b2");
+
+btn.addEventListener('click', function () {
+    geserCek(namebtn)
+});
+btn2.addEventListener('click', function () {
+    geserCek(namebtn2)
+});
 //event when fill the input
-const table = document.querySelectorAll('.d1');
 
-for (let i = 0; i < table.length; i++) {
-    var cnama = table[i].className;
-    table[i].addEventListener('input', function () {
-        if (i == table.length - 1) {
-            var concatString = catString(cnama);
-            submitString(concatString);
-        } else {
-            autoNext(i, cnama);
-        }
 
-    });
+function geserCek(nbtn) {
+    document.getElementById(nbtn).focus();
+    const table = document.querySelectorAll('.' + nbtn);
+    for (let i = 0; i < table.length; i++) {
+        table[i].addEventListener('input', function () {
+            if (i == table.length - 1) {
+                var concatString = catString(nbtn);
+                submitString(concatString, nbtn);
+            } else {
+                autoNext(i, nbtn);
+            }
 
+        });
+
+    }
 }
+
+
+// for (let i = 0; i < table1.length; i++) {
+//     let cnama = table1[i].className;
+//     table1[i].addEventListener('input', function () {
+//         if (i == table.length - 1) {
+//             var concatString = catString(cnama);
+//             submitString(concatString);
+//         } else {
+//             autoNext(i, cnama);
+//         }
+
+//     });
+
+// }
 
 
 var row = document.getElementById('ih');
@@ -42,6 +71,10 @@ function catString(cn) {
 }
 
 //submit the concat string
-function submitString(concat) {
-    console.log(concat);
+function submitString(concat, tipe) {
+    if (concat.toUpperCase() == "ABC" && tipe == "d1") {
+        alert("jawaban anda benar");
+    } else if (concat.toUpperCase() == "BCA" && tipe == "m1") {
+        alert("jawaban anda benar");
+    }
 }
