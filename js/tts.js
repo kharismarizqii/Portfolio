@@ -13,13 +13,22 @@ btn2.addEventListener('click', function () {
 
 
 function geserCek(nbtn) {
-    document.getElementById(nbtn).focus();
+    if (document.getElementById(nbtn).disabled == true) {
+        autoNext(0, nbtn);
+    } else {
+        document.getElementById(nbtn).select();
+    }
+
     const table = document.querySelectorAll('.' + nbtn);
     for (let i = 0; i < table.length; i++) {
         table[i].addEventListener('input', function () {
             if (i == table.length - 1) {
                 var concatString = catString(nbtn);
                 submitString(concatString, nbtn);
+                for (let j = 0; j < table.length; j++) {
+                    table[j].disabled = true;
+                }
+
             } else {
                 autoNext(i, nbtn);
             }
@@ -57,7 +66,8 @@ var cname = row.className;
 //the input will automove to the next input when its fill
 function autoNext(i, cn) {
     let d = document.querySelectorAll('.' + cn);
-    d[i + 1].focus();
+
+    d[i + 1].select();
 }
 
 // concat input to string
