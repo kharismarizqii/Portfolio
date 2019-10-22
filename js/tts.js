@@ -1,14 +1,12 @@
-const btn = document.getElementById("b1");
-const namebtn = document.getElementById("b1").getAttribute("name");
-const namebtn2 = document.getElementById("b2").getAttribute("name");
-const btn2 = document.getElementById("b2");
+const btn = document.querySelectorAll("body button");
 
-btn.addEventListener('click', function () {
-    geserCek(namebtn)
+btn.forEach(function (pil) {
+    pil.addEventListener('click', function () {
+        let namebtn = pil.getAttribute('name');
+        geserCek(namebtn);
+    });
 });
-btn2.addEventListener('click', function () {
-    geserCek(namebtn2)
-});
+
 //event when fill the input
 
 
@@ -24,13 +22,17 @@ function geserCek(nbtn) {
         table[i].addEventListener('input', function () {
             if (i == table.length - 1) {
                 var concatString = catString(nbtn);
-                submitString(concatString, nbtn);
-                for (let j = 0; j < table.length; j++) {
-                    table[j].disabled = true;
-                }
+                submitString(concatString, nbtn, table);
+
+
+            } else if (i == table.length - 2 && table[table.length - 1].disabled == true) {
+                var concatString = catString(nbtn);
+                submitString(concatString, nbtn, table);
 
             } else {
                 autoNext(i, nbtn);
+                var concatString = catString(nbtn);
+                submitString(concatString, nbtn, table);
             }
 
         });
@@ -54,8 +56,6 @@ function geserCek(nbtn) {
 // }
 
 
-var row = document.getElementById('ih');
-var cname = row.className;
 
 // the id then will be filled with event listener classname
 // row.addEventListener('input', function () {
@@ -66,8 +66,13 @@ var cname = row.className;
 //the input will automove to the next input when its fill
 function autoNext(i, cn) {
     let d = document.querySelectorAll('.' + cn);
+    if (d[i + 1].disabled == true) {
+        d[i + 2].select();
 
-    d[i + 1].select();
+    } else {
+        d[i + 1].select();
+    }
+
 }
 
 // concat input to string
@@ -81,10 +86,45 @@ function catString(cn) {
 }
 
 //submit the concat string
-function submitString(concat, tipe) {
+function submitString(concat, tipe, table) {
     if (concat.toUpperCase() == "ABC" && tipe == "d1") {
         alert("jawaban anda benar");
+        for (let j = 0; j < table.length; j++) {
+            table[j].disabled = true;
+        }
     } else if (concat.toUpperCase() == "BCA" && tipe == "m1") {
         alert("jawaban anda benar");
+        for (let j = 0; j < table.length; j++) {
+            table[j].disabled = true;
+        }
+    } else if (concat.toUpperCase() == "ETNIS" && tipe == "d2") {
+        for (let j = 0; j < table.length; j++) {
+            table[j].disabled = true;
+        }
+    } else if (concat.toUpperCase() == "ADERA" && tipe == "d3") {
+        for (let j = 0; j < table.length; j++) {
+            table[j].disabled = true;
+        }
+    } else if (concat.toUpperCase() == "TKA" && tipe == "m2") {
+        for (let j = 0; j < table.length; j++) {
+            table[j].disabled = true;
+        }
+    } else if (concat.toUpperCase() == "RAM" && tipe == "m3") {
+        for (let j = 0; j < table.length; j++) {
+            table[j].disabled = true;
+        }
+    } else if (concat.toUpperCase() == "LAMPUNG" && tipe == "d4") {
+        for (let j = 0; j < table.length; j++) {
+            table[j].disabled = true;
+        }
+    } else if (concat.toUpperCase() == "EROPA" && tipe == "m4") {
+        for (let j = 0; j < table.length; j++) {
+            table[j].disabled = true;
+        }
+    } else if (concat.toUpperCase() == "NOBEL" && tipe == "m5") {
+        for (let j = 0; j < table.length; j++) {
+            table[j].disabled = true;
+        }
     }
+
 }

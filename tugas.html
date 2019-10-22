@@ -14,8 +14,8 @@
 </head>
 
 <body>
-	<div class="container">
-		<div class="row">
+	<div class="container" id="whole">
+		<div class="row mt-5">
 			<div class="col">
 				<table class=" tabel">
 					<tr>
@@ -49,11 +49,11 @@
 					<tr>
 
 						<td class="block"></td>
-						<td class="block"><input class="m1" type="text" maxlength="1"></td>
+						<td class="block"><input class="m1 d3" id="d3" type="text" maxlength="1"></td>
 						<td class="block"><input class="d3" type="text" maxlength="1"></td>
 						<td class="block"><input class="d3" type="text" maxlength="1"></td>
-						<td class="block"><input class="d3" type="text" maxlength="1"></td>
-						<td class="block"><input class="d3" type="text" maxlength="1"></td>
+						<td class="block"><input class="d3 m3" id="m3" type="text" maxlength="1"></td>
+						<td class="block"><input class="d3 m2" type="text" maxlength="1"></td>
 						<td class="block"></td>
 						<td class="block"></td>
 						<td class="block"></td>
@@ -72,14 +72,14 @@
 					</tr>
 
 					<tr>
-						<td class="block"><input class="m4" type="text" maxlength="1"></td>
+						<td class="block"><input class="m4" id="m4" type="text" maxlength="1"></td>
 						<td class="block"></td>
+						<td class="block"><input class="d4" id="d4" type="text" maxlength="1"></td>
+						<td class="block"><input class="d4" type="text" maxlength="1"></td>
+						<td class="block"><input class="d4 m3" type="text" maxlength="1"></td>
 						<td class="block"><input class="d4" type="text" maxlength="1"></td>
 						<td class="block"><input class="d4" type="text" maxlength="1"></td>
-						<td class="block"><input class="d4" type="text" maxlength="1"></td>
-						<td class="block"><input class="d4" type="text" maxlength="1"></td>
-						<td class="block"><input class="d4" type="text" maxlength="1"></td>
-						<td class="block"><input class="d4 m5" type="text" maxlength="1"></td>
+						<td class="block"><input class="d4 m5" id="m5" type="text" maxlength="1"></td>
 						<td class="block"><input class="d4" type="text" maxlength="1"></td>
 					</tr>
 
@@ -103,7 +103,7 @@
 						<td class="block"><input class="d5" type="text" maxlength="1"></td>
 						<td class="block"><input class="d5" type="text" maxlength="1"></td>
 						<td class="block"><input class="d5" type="text" maxlength="1"></td>
-						<td class="block"><input class="d5" type="text" maxlength="1"></td>
+						<td class="block"><input class="d5 m5" type="text" maxlength="1"></td>
 						<td class="block"></td>
 					</tr>
 
@@ -134,14 +134,84 @@
 					</tr>
 				</table>
 			</div>
+			<link rel="stylesheet" href="css/bootstrap.min.css">
 
 			<div class="col">
 				<h4>Mendatar</h4>
-				<p>1. Nama baterai</p>
-				<button type="button" name="d1" id="b1">PILIH</button>
+				<div class="d-flex flex-row align-items-baseline">
+					<div class="p-2">
+						<p>1. Nama baterai</p>
+					</div>
+					<div class="p-2"><button type="button" name="d1"
+							class="btn btn-primary btn-sm align-self-center">PILIH</button>
+					</div>
+				</div>
+				<div class="d-flex flex-row align-items-baseline">
+					<div class="p-2">
+						<p>2. Suku Bangsa</p>
+					</div>
+					<div class="p-2"><button type="button" name="d2"
+							class="btn btn-primary btn-sm align-self-center">PILIH</button>
+					</div>
+				</div>
+				<div class="d-flex flex-row align-items-baseline">
+					<div class="p-2">
+						<p>3. Nama Penyanyi</p>
+					</div>
+					<div class="p-2"><button type="button" name="d3"
+							class="btn btn-primary btn-sm align-self-center">PILIH</button>
+					</div>
+				</div>
+				<div class="d-flex flex-row align-items-baseline">
+					<div class="p-2">
+						<p>4. Provinsi paling selatan di Sumatera</p>
+					</div>
+					<div class="p-2"><button type="button" name="d4"
+							class="btn btn-primary btn-sm align-self-center">PILIH</button>
+					</div>
+				</div>
+
 				<h4>Menurun</h4>
-				<p>1. Nama Bank</p>
-				<button type="button" name="m1" id="b2">PILIH</button>
+				<div class="d-flex flex-row align-items-baseline">
+					<div class="p-2">
+						<p>1. Nama Bank</p>
+					</div>
+					<div class="p-2"><button type="button" name="m1"
+							class="btn btn-primary btn-sm align-self-center">PILIH</button>
+					</div>
+				</div>
+				<div class="d-flex flex-row align-items-baseline">
+					<div class="p-2">
+						<p>2. Tenaga Kerja Asing</p>
+					</div>
+					<div class="p-2"><button type="button" name="m2"
+							class="btn btn-primary btn-sm align-self-center">PILIH</button>
+					</div>
+				</div>
+				<div class="d-flex flex-row align-items-baseline">
+					<div class="p-2">
+						<p>3. Random Access Memory</p>
+					</div>
+					<div class="p-2"><button type="button" name="m3"
+							class="btn btn-primary btn-sm align-self-center">PILIH</button>
+					</div>
+				</div>
+				<div class="d-flex flex-row align-items-baseline">
+					<div class="p-2">
+						<p>4. Benua Biru</p>
+					</div>
+					<div class="p-2"><button type="button" name="m4"
+							class="btn btn-primary btn-sm align-self-center">PILIH</button>
+					</div>
+				</div>
+				<div class="d-flex flex-row align-items-baseline">
+					<div class="p-2">
+						<p>5. Penghargaan untuk penelitian yang luar biasa</p>
+					</div>
+					<div class="p-2"><button type="button" name="m5"
+							class="btn btn-primary btn-sm align-self-center">PILIH</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
